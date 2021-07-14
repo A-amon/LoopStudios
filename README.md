@@ -5,4 +5,4 @@
 This is a one-page site.
 
 ## Additional Technologies
-* GSAP for staggering animation
+* [GSAP](https://github.com/greensock/GSAP) for staggering animation
