@@ -6,3 +6,5 @@ This is a one-page site.
 
 ## Additional Technologies
 * [GSAP](https://github.com/greensock/GSAP) for staggering animation
+* [ScrollTrigger plugin for GSAP](https://greensock.com/scrolltrigger/) for scroll-triggered animation
+* [Normalize.css](https://github.com/necolas/normalize.css/) for consistent reset styles
