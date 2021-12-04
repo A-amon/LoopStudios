@@ -76,21 +76,6 @@
 		&__item{
 			margin-left: 1rem;
 		}
-
-		&__link{
-			&:hover::after{
-				transform:scaleX(1);
-			}
-
-			&::after{
-				content:'';
-				display: block;
-				border-bottom: 2px solid $c-white;
-				transform:scaleX(0);
-				transition: transform 0.3s;
-				margin-top: 0.5rem;
-			}
-		}
 	}
 }
 
