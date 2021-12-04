@@ -1,0 +1,36 @@
+.about{
+	.container{
+		position: relative;
+	}
+	
+	&__title{
+		margin-bottom: 0;
+	}
+
+	&__desc{
+		color:$c-dark-gray;
+	}
+
+	&__image{
+		width: 100%;
+	}
+
+	&__body{
+		max-width: 600px;
+		margin: auto;
+	}
+
+	@include min-query($d-laptop){
+		&__image{
+			max-width: 700px;
+		}
+		&__body{
+			max-width: 400px;
+			background-color: $c-white;
+			position:absolute;
+			bottom:0;
+			right:0;
+			padding:2rem 4rem;
+		}
+	}
+}

@@ -1,0 +1,62 @@
+.creation{
+	position: relative;
+	text-align: left;
+	overflow: hidden;
+	&::before{
+		content:'';
+		height: 100%;
+		width: 100%;
+		background:linear-gradient(to right, rgba($c-black, 0.5), transparent);
+	}
+
+	&::before, &__title{
+		position:absolute;
+		bottom:0;
+		left:0;
+	}
+
+	&__image{
+		width: 100%;
+		position: relative;
+		z-index: -1;
+		transition:transform 0.3s;
+	}
+
+	&__title{
+		width: 45%;
+		padding:1rem;
+		color:$c-white;
+		margin:0;
+		font-size:1.5rem;
+	}
+
+	&__link{
+		color:transparent;
+		position: absolute;
+		top:0;
+		left:0;
+		display: block;
+		height:100%;
+		width: 100%;
+	}
+
+	&:hover::before{
+		background-color: rgba($c-white,0.5);
+		background-image: none;
+	}
+
+	&:hover &__title{
+		color:$c-black;
+	}
+
+	&:hover &__image{
+		transform: scale(1.1);
+	}
+
+	@include min-query($d-tablet){
+		&__title{
+			font-size:2rem;
+			width: 60%;
+		}
+	}
+}

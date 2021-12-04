@@ -1,0 +1,61 @@
+.hero{
+	position: relative;
+	text-align: left;
+	overflow: hidden;
+
+	.container{
+		position: absolute;
+		top:0;
+		left:0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		align-items: center;
+	}
+
+	&__image{
+		object-fit: cover;
+		height: 100%;
+		width: 100%;
+	}
+
+	&__text{
+		max-height: fit-content;
+		color:$c-white;
+		padding:1.5rem;
+		max-width: 350px;
+		position: relative;
+
+		&::before{
+			content:'';
+			display: block;
+			height:100%;
+			width: 100%;
+			background-color:white;
+			position: absolute;
+			top:0;
+			left:0;
+			animation:shrinkIn 0.7s 1 forwards;
+			border:2px solid $c-white;
+		}
+	}
+
+	@include min-query($d-tablet){
+		height: 600px;
+		&__text{
+			max-width: 450px;
+		}
+	}
+}
+
+@keyframes shrinkIn {
+	from{
+		transform:scale(5);
+		background-color:rgba(255,255,255,1);
+	}
+	to{
+		transform:scale(1);
+		background-color:rgba(255,255,255,0);
+	}
+}

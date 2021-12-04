@@ -1,0 +1,15 @@
+
+/*****************
+* MEDIA QUERIES
+******************/
+@mixin min-query($d-size){
+	@media screen and (min-width:$d-size) {
+		@content;
+	}
+}
+
+@mixin max-query($d-size){
+	@media screen and (max-width:$d-size) {
+		@content;
+	}
+}

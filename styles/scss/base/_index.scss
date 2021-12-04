@@ -1,0 +1,50 @@
+@import './resets';
+
+body{
+	font-family:$ff-alata;
+}
+
+h1,h2,h3{
+	font-family: $ff-josefin;
+	font-weight: $fw-light;
+	text-transform: uppercase;
+}
+
+h1{
+	font-size:2.5rem;
+	@include min-query($d-tablet){
+		font-size: 3rem;
+	}
+
+	@include min-query($d-laptop){
+		font-size: 4rem;
+	}
+}
+
+h2{
+	font-size:2rem;
+	@include min-query($d-tablet){
+		font-size: 2.5rem;
+	}
+}
+
+p{
+	line-height: 1.5;
+}
+
+section, footer{
+	text-align: center;
+	.container{
+		padding-top:2rem;
+		padding-bottom: 2rem;
+	}
+
+	@include min-query($d-laptop){
+		text-align: left;
+
+		.container{
+			padding-top:5rem;
+			padding-bottom: 5rem;
+		}
+	}
+}

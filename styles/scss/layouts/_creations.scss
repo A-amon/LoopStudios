@@ -1,0 +1,15 @@
+.creations{
+	&__header{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__items{
+		list-style: none;
+		padding: 0;
+		display: grid;
+		grid-gap: 25px;
+        grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
+	}
+}

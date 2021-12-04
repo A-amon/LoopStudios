@@ -1,0 +1,11 @@
+.logo{
+	&__image{
+		height: 1.5rem;
+	}
+
+	@include min-query($d-tablet){
+		&__image{
+			height: 2rem;
+		}
+	}
+}
